@@ -32,7 +32,7 @@ pipeline {
      
     stage('Pushing Image to DockerHub') {
       steps {
-        sh label: '', script: ''' docker push mehta14/java-image1:$BUILD_NUMBER''' 
+        sh label: '', script: '''docker push mehta14/java-image1:$BUILD_NUMBER''' 
       }
     } 
     
