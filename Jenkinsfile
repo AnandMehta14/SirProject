@@ -21,6 +21,14 @@ pipeline {
         echo "Build_number:$BUILD_NUMBER"
       }
     }
+     
+    stage('Docker Image') {
+      steps {
+        sh label: '', script: '''docker build -t java-image:$BUILD_NUMBER .
+                                 docker tag java-image:$BUILD_NUMBER mehta14/java-image:$BUILD_NUMBER'''                               
+                               //  docker push mehta14/jb-hello-world:$BUILD_NUMBER''' 
+      }
+    } 
     
   
   }
