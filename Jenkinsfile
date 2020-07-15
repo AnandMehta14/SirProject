@@ -25,7 +25,7 @@ pipeline {
     stage('Docker Image') {
       steps {
         sh label: '', script: '''docker build -t java-image1:$BUILD_NUMBER .
-                                 docker tag java-image:$BUILD_NUMBER mehta14/java-image1:$BUILD_NUMBER'''                               
+                                 docker tag java-image1:$BUILD_NUMBER mehta14/java-image1:$BUILD_NUMBER'''                               
                                
       }
     } 
