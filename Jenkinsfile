@@ -38,7 +38,7 @@ pipeline {
     
     stage('Connection to Dev-Env') {
       steps {
-        sh label: '', script: '''ssh jenkins@172.31.47.222 ''' 
+        sh label: '', script: '''ssh jenkins@172.31.47.222 cat /home/jenkins/a.txt''' 
       }
     }  
     
