@@ -38,7 +38,7 @@ pipeline {
     
     stage('Connection to Dev-Env') {
       steps {
-        sh label: '', script: '''ssh jenkins@172.31.47.222 cat /home/jenkins/a.txt''' 
+        sh label: '', script: '''ssh jenkins@172.31.47.222 docker pull mehta14/java-image1:$BUILD_NUMBER''' 
       }
     }  
     
